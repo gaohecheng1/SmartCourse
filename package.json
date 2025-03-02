@@ -1,0 +1,46 @@
+{
+  "name": "smartcourse",
+  "version": "1.0.0",
+  "description": "智课（SmartCourse）是一款专为高校导员和学生设计的跨端课程管理应用",
+  "main": "index.js",
+  "scripts": {
+    "start": "node backend/app.js",
+    "server": "nodemon backend/app.js",
+    "client": "npm start --prefix web",
+    "mobile": "cd mobile && npx react-native start",
+    "desktop": "cd desktop && npm run dev",
+    "dev": "concurrently \"npm run server\" \"npm run client\"",
+    "install:all": "npm install && npm install --prefix web && npm install --prefix mobile && npm install --prefix desktop",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gaohecheng1/smartcourse.git"
+  },
+  "keywords": [
+    "课程管理",
+    "课表",
+    "通知",
+    "跨端应用"
+  ],
+  "author": "",
+  "license": "GPL-3.0",
+  "bugs": {
+    "url": "https://github.com/gaohecheng1/smartcourse/issues"
+  },
+  "homepage": "https://github.com/gaohecheng1/smartcourse#readme",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "cors": "^2.8.5",
+    "express": "^4.18.2",
+    "express-validator": "^7.0.1",
+    "jsonwebtoken": "^9.0.2",
+    "mongoose": "^7.5.0",
+    "redis": "^4.6.8",
+    "socket.io": "^4.7.2"
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.1",
+    "nodemon": "^3.0.1"
+  }
+}
